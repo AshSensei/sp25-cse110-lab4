@@ -32,3 +32,41 @@
     C. student.greeting()
     D. student["Favorite Teacher"].name
     E. student.courseLoad[0]
+
+## Arithmetic
+13. Arithmetic Questions:
+    A. '3' + 2 = '32' because the integer of 2 is mapped to its string representation.
+    B. '3' - 2 = 1 because '3' was mapped to its integer representation
+    C. 3 + null = 3 because null was converted into the integer of 0
+    D. '3' + null = '3null' because null was converted into the string 'null' and concatenated with 3.
+    E. true + 3 = 4 because true was converted into the integer of 1.
+    F. false + null = 0 because both boolean values were converted to their integer equivalent of 0.
+    G. '3' + undefined = '3undefined' because undefined was converted to the string 'undefined' and then was concatenated with 3.
+    H. '3' - undefined = NaN because undefined was converted to a NaN and the result of subtraction with that is only NaN.
+
+## Comparison
+14. Comparisons:
+    A. '2' > 1 returns as true because the value of '2' was converted to its integer value of 2.
+    B. '2' < '12' returns as false because it compares it's order in Unicode in which '2' is at a higher number than '12'.
+    C. 2 == '2' returns as true because the string of '2' becomes its integer value of 2 and so they match.
+    D. 2 === '2' returns as false as it checks for strict equality and does not include type conversion and since '2' is not the same as 2 it returns false.
+    E. true == 2 returns as false because the value of true is converted to the integer 1 which is not equal to 2.
+    F. true === Boolean(2) returns as true because 2 is converted to the Boolean value of true so even with the strict equality check, the operator handles the type conversion.
+
+15. Explain the difference between the == and === operators.
+    While both operators check for equality, == allows for type conversion when comparing two values while === compares two values without converting either value into any other data types. This can lead to expressions returning as true or false or other values depending on which operator is being used.
+
+## Loops
+16. Given the above Object, write a for...in loop that will iterate through it and print out the value of the property if the property starts with the letter r, or if the value of that property is an odd number.'
+    See part2-question16.js file.
+
+## Functions
+17. If the function above is called with the following parameters modifyArray([1,2,3], doSomething), what will be the result? Briefly walk through how you arrived at that result. (This should be in your part2.md). Here we are passing in a function as a parameter, however we can also return a function from another function just as easily, you're encouraged to play around with callbacks as they are used heavily in frontend JS development. 
+    The result will be [2, 4, 6] as the doSomething function that is used as a callback function will double each integer in the input array and then output the value into a new array that is returned by the function modifyArray.
+
+## Timeouts
+18. The above program only prints out the time once when executed. Modify this code such that the program prints out the current time every second.  (This should be a JS file - part2-question18.js)
+    See file part2-question18.
+
+19. What is the output of the above code?
+    The code outputs 1, 4, 3, and then 2. This is because the timeouts make 3 and 2 print last but 2 has a longer timeout time.
